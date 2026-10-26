@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glomerulus Review</title>
+<style>
+  :root {
+    --surface: #fcfcfb; --panel: #ffffff; --ink: #0b0b0b; --ink2: #52514e; --line: #e2e1dc;
+    --accent: #2a78d6; --done: #1baf7a;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --surface: #1a1a19; --panel: #242423; --ink: #f0efec; --ink2: #c3c2b7; --line: #3a3a38; --accent: #3987e5; --done: #199e70; }
+  }
+  :root[data-theme="dark"] { --surface: #1a1a19; --panel: #242423; --ink: #f0efec; --ink2: #c3c2b7; --line: #3a3a38; --accent: #3987e5; --done: #199e70; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--surface); color: var(--ink); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { position: sticky; top: 0; z-index: 2; background: var(--surface); border-bottom: 1px solid var(--line); padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+  h1 { font-size: 17px; margin: 0 12px 0 0; }
+  .progress { color: var(--ink2); }
+  button { font: inherit; padding: 6px 12px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer; }
+  button.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  .help { color: var(--ink2); margin: 0 0 16px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .card.labelled { border-color: var(--done); }
+  .card img { width: 100%; aspect-ratio: 1; display: block; cursor: zoom-in; }
+  .card .body { padding: 10px; }
+  .case { font-weight: 600; margin-bottom: 6px; }
+  .opts { display: flex; flex-wrap: wrap; gap: 6px; }
+  .opts label { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; padding: 3px 6px; border: 1px solid var(--line); border-radius: 5px; cursor: pointer; }
+  .opts input { margin: 0; }
+  .opts label:has(input:checked) { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+  textarea { width: 100%; margin-top: 6px; font: inherit; font-size: 13px; padding: 4px; border: 1px solid var(--line); border-radius: 5px; background: var(--surface); color: var(--ink); }
+  dialog { border: none; padding: 0; background: transparent; }
+  dialog img { max-width: 92vw; max-height: 92vh; display: block; }
+  dialog::backdrop { background: rgba(0,0,0,.8); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Blinded glomerulus review</h1>
+  <span class="progress" id="progress"></span>
+  <button class="primary" id="export">Export CSV</button>
+  <button id="clear">Clear all</button>
+</header>
+<main>
+  <p class="help">PAS, about 1 µm/px, glomerulus centred. Preparation and AI scores are hidden and the
+  order is random. Choose one category per case and add a note if you want. Answers are kept in this
+  browser; use <b>Export CSV</b> when finished and send the file back. Click an image to enlarge it.</p>
+  <div class="grid" id="grid"></div>
+</main>
+<dialog id="zoom"><img id="zoomimg" alt=""></dialog>
+<script>
+const CATS = [
+  ["normal", "Unremarkable"],
+  ["ischaemic", "Ischaemic / periglomerular fibrosis"],
+  ["segmental", "Segmental sclerosis"],
+  ["global", "Global sclerosis"],
+  ["artefact", "Artefact / not glomerulus"],
+  ["uncertain", "Uncertain"],
+];
+const KEY = "glomerulus-review-v1";
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) { state = {}; }
+function persist() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+
+const CASES = Array.from({ length: 128 }, (_, i) => "G" + String(i + 1).padStart(3, "0"));
+const grid = document.getElementById("grid");
+for (const c of CASES) {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `<img src="img/${c}.jpg" alt="${c}" loading="lazy"><div class="body"><div class="case">${c}</div>
+    <div class="opts">${CATS.map(([v, l]) => `<label><input type="radio" name="${c}" value="${v}">${l}</label>`).join("")}</div>
+    <textarea rows="1" placeholder="note (optional)"></textarea></div>`;
+  const s = state[c] || {};
+  if (s.label) { card.querySelector(`input[value="${s.label}"]`).checked = true; card.classList.add("labelled"); }
+  card.querySelector("textarea").value = s.note || "";
+  card.querySelectorAll("input").forEach(inp => inp.addEventListener("change", () => {
+    state[c] = { ...(state[c] || {}), label: inp.value }; card.classList.add("labelled"); persist(); update();
+  }));
+  card.querySelector("textarea").addEventListener("input", e => { state[c] = { ...(state[c] || {}), note: e.target.value }; persist(); });
+  card.querySelector("img").addEventListener("click", () => { document.getElementById("zoomimg").src = `img/${c}.jpg`; document.getElementById("zoom").showModal(); });
+  grid.appendChild(card);
+}
+document.getElementById("zoom").addEventListener("click", e => e.currentTarget.close());
+function update() {
+  const n = CASES.filter(c => state[c] && state[c].label).length;
+  document.getElementById("progress").textContent = `${n} / ${CASES.length} labelled`;
+}
+update();
+document.getElementById("export").addEventListener("click", () => {
+  const rows = [["case", "label", "note"]].concat(CASES.map(c => [c, (state[c] || {}).label || "", ((state[c] || {}).note || "").replace(/"/g, '""')]));
+  const csv = rows.map(r => r.map(v => `"${v}"`).join(",")).join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv" }));
+  a.download = "glomerulus_review_labels.csv";
+  a.click();
+});
+document.getElementById("clear").addEventListener("click", () => {
+  if (confirm("Delete all answers in this browser?")) { state = {}; persist(); location.reload(); }
+});
+</script>
+</body>
+</html>

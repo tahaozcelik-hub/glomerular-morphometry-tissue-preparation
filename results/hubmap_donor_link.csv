@@ -1,0 +1,13 @@
+patient_number,age,sex,race,bmi,n_candidates,hubmap_donor,medical_history,group,n_pas_datasets,scanners,resolutions
+63921,48,Male,White,35.3,1,HBM522.WZBV.379,Hypertension; Coronary Artery Disease; Cancer,Vanderbilt TMC,2,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,500.0;nan
+65631,73,Female,White,,1,HBM547.NCQL.874,Hypertension; Coronary Artery Disease; Type 2 Diabetes Mellitus; Cancer,Vanderbilt TMC,3,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,500.0;650.0;nan
+66999,56,Male,White,27.7,1,HBM687.KPKM.763,Cancer,Vanderbilt TMC,5,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;0.65;500.0;650.0;nan
+67026,53,Male,Black or African American,26.5,1,HBM745.MDSR.597,Hypertension; Coronary Artery Disease; Cancer,Vanderbilt TMC,3,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,500.0;650.0;nan
+67112,56,Male,White,32.5,1,HBM322.KQBK.747,Hypertension; Coronary Artery Disease; Cancer,Vanderbilt TMC,5,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.65;500.0;650.0;nan
+67177,31,Male,White,32.6,1,HBM368.WSHR.356,,Vanderbilt TMC,4,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;500.0;650.0;nan
+67347,58,Female,White,23.0,1,HBM938.LVRS.434,Cancer,Vanderbilt TMC,6,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;500.0;650.0;nan
+67548,58,Male,Black or African American,22.0,1,HBM525.JNPV.685,Hypertension; Coronary Artery Disease,Vanderbilt TMC,5,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.65;500.0;650.0;nan
+68138,66,Female,White,32.2,1,HBM758.JRSC.348,Cancer,Vanderbilt TMC,3,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;500.0;nan
+68250,44,Female,White,28.0,1,HBM679.GXQW.326,Cancer,Vanderbilt TMC,5,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;0.65;500.0;nan
+68304,66,Female,White,25.4,0,,,,0,,
+68555,76,Female,White,37.5,1,HBM769.HVDR.369,Hypertension; Coronary Artery Disease; Cancer,Vanderbilt TMC,4,Leica Biosystems SCN400;Zeiss Microscopy Axio Scan.Z1,0.22;500.0;650.0;nan

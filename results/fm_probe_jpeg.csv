@@ -1,0 +1,4 @@
+model,dim,prep_auc_lodo,ss_prep,ss_donor,ss_section,ss_resid,donor_xprep_top1,donor_xprep_knn_acc,r2_log_area
+morphometry,9,0.5009,0.0047,0.0467,0.0003,0.9483,0.1429,0.2163,1.0000
+phikon,768,0.9998,0.1854,0.2292,0.0364,0.5490,0.2143,0.1819,0.7490
+lunit,384,1.0000,0.1876,0.2046,0.0428,0.5650,0.0714,0.1895,0.7059

@@ -1,0 +1,7 @@
+set,outcome,FFPE,frozen,fisher_p
+flag,ischaemic/sclerotic,17/20 (85%),15/48 (31%),5.6401416270546486e-05
+flag,uncertain or artefact,3/20 (15%),28/48 (58%),0.0012461548723068537
+flag,global sclerosis,1/20 (5%),1/48 (2%),0.504828797190518
+control,ischaemic/sclerotic,9/30 (30%),2/30 (7%),0.04190011890841873
+control,uncertain or artefact,0/30 (0%),14/30 (47%),1.6767384375519427e-05
+control,global sclerosis,0/30 (0%),0/30 (0%),1.0

@@ -1,0 +1,4 @@
+img_id,split,px_um,windows,n_nuclei,nuc_area_median_um2,nuc_minor_axis_median_um
+HBM933.LDKX.448,extra,0.65,60,1039,21,4.251
+HBM395.HZGV.525,extra,0.65,60,580,21,4.184
+HBM925.FFHK.438,extra,0.65,55,1356,34,5.466

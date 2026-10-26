@@ -1,0 +1,13 @@
+donor,age,sex,race,bmi,hypertension,diabetes,laterality,frozen_sections,ffpe_sections,manual_annotation,glomeruli_measured,cortex_mm2
+63921,48,M,White,35.3,yes,no,Right,1,0,yes,191,93.2
+65631,73,F,White,,yes,yes,Left,0,1,yes,112,34.1
+66999,56,M,White,27.7,no,no,Right,1,1,yes,1076,456.4
+67026,53,M,Black,26.5,yes,no,Left,1,1,yes,336,118.7
+67112,56,M,White,32.5,yes,no,Left,1,1,"no, yes",531,334.1
+67177,31,M,White,32.6,no,no,Right,0,1,yes,129,74.3
+67347,58,F,White,23.0,no,no,Right,2,1,"no, yes",1051,468.0
+67548,58,M,Black,22.0,yes,no,Right,1,1,yes,490,223.3
+68138,66,F,White,32.2,no,no,Left,1,0,no,122,81.1
+68250,44,F,White,28.0,no,no,Right,1,0,yes,358,143.0
+68304,66,F,White,25.4,n/a,n/a,Left,1,1,"no, yes",490,169.8
+68555,76,F,White,37.5,yes,no,Left,1,1,"no, yes",317,158.9

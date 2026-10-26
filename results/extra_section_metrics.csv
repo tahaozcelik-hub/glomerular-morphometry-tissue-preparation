@@ -1,0 +1,27 @@
+img_id,donor,prep,scanner_group,px_um,age,sex,race,bmi,medical_history,n_glom_all,n_glom,cortex_qc_frac,cortex_qc_pass,tissue_mm2,cortex_mm2,glom_density_mm2,median_area_um2,mean_area_um2,mgv_um3
+HBM574.HBKW.654,HBM269.TNNP.865,fresh_frozen,Leica SCN400 (IMS),0.65,20,Male,Black or African American,,,693,687,0.99134,True,293.98,250.57,2.7417,20875,21188,4.2201e+06
+HBM758.PCQK.344,HBM558.NQFP.597,fresh_frozen,Zeiss Axio Scan,0.65,20,Female,White,22.8,,308,306,0.99351,True,150.31,107.88,2.8364,22398,22177,4.5191e+06
+HBM483.QDWC.287,HBM924.QHJN.586,fresh_frozen,Leica SCN400 (IMS),0.65,43,Male,White,27.1,,252,246,0.97619,True,198.35,92.071,2.6718,20373,20557,4.033e+06
+HBM545.FXDH.822,HBM425.SQGM.878,fresh_frozen,Zeiss Axio Scan,0.65,44,Female,White,48.2,Hypertension; Coronary Artery Disease; Gastrointestinal disease; Cancer,138,138,1,True,101.21,79.385,1.7384,23772,24442,5.2287e+06
+HBM837.KXCP.628,HBM395.HCTC.292,fresh_frozen,Zeiss Axio Scan,0.65,46,Male,White,22.3,Cancer,240,237,0.9875,True,190.46,95.504,2.4816,27164,26375,5.8609e+06
+HBM934.NQRG.772,HBM948.LPFP.523,fresh_frozen,Leica SCN400 (IMS),0.65,51,Female,White,40,,207,207,1,True,134.21,128.74,1.6079,30659,30646,7.3408e+06
+HBM334.SFHW.637,HBM245.VFCF.396,fresh_frozen,Zeiss Axio Scan,0.65,54,Female,White,44.5,,223,222,0.99552,True,167.08,92.023,2.4124,26205,25632,5.6151e+06
+HBM433.FSJQ.664,HBM935.PVKV.959,fresh_frozen,Zeiss Axio Scan,0.65,55,Male,White,30,Cancer,167,165,0.98802,True,97.839,65.439,2.5214,22629,21939,4.4464e+06
+HBM853.SVKT.563,HBM259.SNDB.787,fresh_frozen,Zeiss Axio Scan,0.65,56,Male,White,25.2,,274,272,0.9927,True,229.68,147.65,1.8422,31855,30334,7.2291e+06
+HBM773.TGVP.985,HBM352.MHHS.224,fresh_frozen,Leica SCN400 (IMS),0.65,56,Female,White,45.5,Cancer,91,89,0.97802,True,115.38,51.836,1.7169,27532,27353,6.19e+06
+HBM933.LDKX.448,HBM485.HTBW.247,fresh_frozen,Leica SCN400 (registered),0.65,57,Female,White,33.6,Hypertension; Coronary Artery Disease; Gastrointestinal disease,127,127,0.72441,False,114.89,,,23750,23140,4.8165e+06
+HBM725.FVSQ.685,HBM357.GMBX.758,fresh_frozen,Zeiss Axio Scan,0.65,57,Male,White,25.3,,280,279,0.99643,True,162.03,126.27,2.2095,27330,25829,5.6798e+06
+HBM395.HZGV.525,HBM429.BVWN.357,fresh_frozen,Leica SCN400 (registered),0.65,62,Male,White,34.9,Cancer,335,335,0.45373,False,199.4,,,24076,24532,5.2575e+06
+HBM857.KPKW.754,HBM957.WLTT.733,fresh_frozen,Zeiss Axio Scan,0.65,64,Male,White,33.1,,229,229,1,True,120.84,98.072,2.335,22387,21762,4.3928e+06
+HBM494.DTJH.963,HBM737.MBKD.598,fresh_frozen,Zeiss Axio Scan,0.65,64,Female,White,,,118,118,1,True,102.52,74.612,1.5815,23456,26203,5.8037e+06
+HBM564.LTGZ.238,HBM452.KSNV.453,fresh_frozen,Zeiss Axio Scan,0.65,64,Female,White,30.1,,203,203,1,True,118.94,81.027,2.5053,26169,24706,5.3135e+06
+HBM448.HCQZ.445,HBM675.JLVT.896,fresh_frozen,Zeiss Axio Scan,0.65,65,Male,White,35.3,,195,192,0.98462,True,165.36,100.9,1.9029,24651,24757,5.3302e+06
+HBM573.GHFZ.926,HBM889.KSKV.978,fresh_frozen,Zeiss Axio Scan,0.65,66,Female,White,39.4,,123,123,0.89431,False,152.49,,,28178,29058,6.7778e+06
+HBM935.VQSX.628,HBM285.XQXL.628,fresh_frozen,Zeiss Axio Scan,0.65,66,Male,White,23.7,,249,249,1,True,160.47,104.8,2.3759,23057,22797,4.7099e+06
+HBM325.XBSF.444,HBM226.XVDP.877,FFPE,Leica SCN400 (FFPE),0.5,66,Male,White,31.4,Hypertension; Coronary Artery Disease; Cancer,101,101,1,True,95.341,76.066,1.3278,22539,23916,5.0609e+06
+HBM732.RPGF.863,HBM496.BKTT.757,fresh_frozen,Zeiss Axio Scan,0.65,67,Female,White,27.4,,235,229,0.97447,True,99.024,92.296,2.4811,22341,23972,5.0786e+06
+HBM665.RZDD.966,HBM994.BBMC.798,fresh_frozen,Zeiss Axio Scan,0.65,68,Male,White,25.1,,254,252,0.99213,True,233.96,122.62,2.0551,21401,21677,4.367e+06
+HBM994.CKXP.595,HBM786.ZGPD.766,fresh_frozen,Zeiss Axio Scan,0.65,72,Male,White,40.6,,113,112,0.99115,True,96.984,78.661,1.4238,27855,27456,6.225e+06
+HBM939.QFQJ.845,HBM859.HGSB.847,fresh_frozen,Zeiss Axio Scan,0.65,72,Male,White,35.5,,198,198,1,True,175.06,156.71,1.2635,25145,28049,6.4279e+06
+HBM925.FFHK.438,HBM633.KPHW.963,fresh_frozen,Leica SCN400 (registered),0.65,77,Female,White,28.2,Hypertension; Coronary Artery Disease; Cancer; Type 2 Diabetes Mellitus,55,55,1,True,82.245,25.541,2.1534,20232,20135,3.9094e+06
+HBM295.JXZM.269,HBM253.KBSM.226,fresh_frozen,Zeiss Axio Scan,0.65,78,Female,White,23,,199,189,0.94975,True,163.97,90.62,2.0856,24911,25152,5.458e+06

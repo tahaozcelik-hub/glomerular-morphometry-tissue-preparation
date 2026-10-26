@@ -1,0 +1,7 @@
+model,target_prep,recall,precision,f1,pixel_dice,median_iou,area_bias_pct,n_wsi
+FFPE-only,FFPE,0.9855,0.9281,0.9551,0.9419,0.9386,0.3685,7
+FFPE-only,fresh_frozen,0.7696,0.9414,0.8538,0.8405,0.9095,-3.0013,8
+frozen-only,FFPE,0.9787,0.9398,0.9572,0.9436,0.9339,3.2235,7
+frozen-only,fresh_frozen,0.9903,0.9270,0.9558,0.9382,0.9227,0.7351,8
+mixed,FFPE,0.9872,0.9341,0.9541,0.9451,0.9373,1.2384,7
+mixed,fresh_frozen,0.9916,0.9363,0.9578,0.9378,0.9213,0.8667,8
