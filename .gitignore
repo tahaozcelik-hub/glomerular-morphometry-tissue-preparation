@@ -1,6 +1,5 @@
 data/
 work/
-figures/out/
 review/glomerulus_review.html
 __pycache__/
 *.pyc

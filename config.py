@@ -20,6 +20,5 @@ PRED = os.path.join(WORK_DIR, "pred")         # variants: pred_FFPE, pred_fresh_
 EMB = os.path.join(WORK_DIR, "emb")
 RES = _env("RES_DIR", os.path.join(REPO, "results"))
 META = os.path.join(REPO, "metadata")
-FIG_OUT = _env("FIG_OUT", os.path.join(REPO, "figures", "out"))
 
 PREP_BY_PX = {0.65: "FFPE", 0.5: "fresh_frozen"}   # challenge images: preparation follows the scanner resolution

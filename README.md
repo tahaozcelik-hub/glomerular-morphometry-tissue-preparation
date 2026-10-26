@@ -20,7 +20,6 @@ The study measures every glomerulus in PAS-stained whole-slide images of human k
 | `nuclear_ruler.py`, `seg/scale_check.py` | Nuclear-size check of the stated pixel size |
 | `hubmap_provenance.py` | HuBMAP metadata: tissue blocks, scanners and donor links |
 | `review/` | Blinded review tool and its statistics |
-| `figures/` | Figures 1–6 and Supplementary Figures S1–S3 |
 | `metadata/extension_sections.csv` | The 27 HuBMAP extension files (one excluded as a duplicate) |
 | `results/` | Measurements and tables reported in the paper |
 | `run_all.sh` | Full pipeline in order |
@@ -55,10 +54,9 @@ python seg/validate.py                  # agreement with manual outlines, per-gl
 python paired_analysis.py --input pred_glomerulus_morphometry.csv --tag _pred7 --cortex_only --no_vertex_cov \
   --paired 66999,67026,67112,67347,67548,68304,68555
 python cohort_analysis.py
-python figures/fig3.py
 ```
 
-The statistics and figures run on the files in `results/` together with the cached images; training and embedding need a CUDA GPU.
+The statistics run on the files in `results/` together with the cached images; training and embedding need a CUDA GPU.
 
 ## Trained models
 

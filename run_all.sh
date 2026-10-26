@@ -57,6 +57,3 @@ python fm/probe.py results/pred_glomerulus_morphometry.csv $W/emb/prednorm _rein
 python fm/probe.py results/pred_glomerulus_morphometry.csv $W/emb/predjpeg _jpeg phikon lunit
 python fm/mitigation.py results/pred_glomerulus_morphometry.csv $W/emb/pred $MODELS_FM
 python review/review_stats.py
-
-# figures
-for f in figures/fig*.py; do python "$f"; done
